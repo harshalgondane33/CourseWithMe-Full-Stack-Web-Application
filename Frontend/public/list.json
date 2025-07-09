@@ -1,0 +1,93 @@
+[
+    {
+        "id":1,
+        "name":"Mern Stack",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":0 ,
+        "category":"free",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    },
+    {
+        "id":2,
+        "name":"Full Stack",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":0 ,
+        "category":"free",
+        "image":"https://jaro-website.s3.ap-south-1.amazonaws.com/2024/04/0-cl7fc6pt1MHjIF4K.png"
+
+    },
+    {
+        "id":3,
+        "name":"Operating System",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":0 ,
+        "category":"free",
+        "image":"https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2NvbXB1dGVyLW9wZXJhdGluZy1zeXRlbS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ=="
+
+    },
+    {
+        "id":4,
+        "name":"Node JS",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":0 ,
+        "category":"free",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    },
+    {
+        "id":5,
+        "name":"C++",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":0 ,
+        "category":"free",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    },
+    {
+        "id":6,
+        "name":"OOPS",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":0 ,
+        "category":"free",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    },
+    {
+        "id":7,
+        "name":"SQL",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":400 ,
+        "category":"paid",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    },
+    {
+        "id":8,
+        "name":"Python",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":500,
+        "category":"paid",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    },
+    {
+        "id":9,
+        "name":"Artificial Intelligence",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":800 ,
+        "category":"paid",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    },
+    {
+        "id":10,
+        "name":"NextJs",
+        "title":"Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,culpa voluptate. Laboriosam dicta" ,
+        "price":1200 ,
+        "category":"paid",
+        "image":"https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+
+    }
+    
+]
