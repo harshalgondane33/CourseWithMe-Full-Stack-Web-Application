@@ -7,9 +7,14 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    reset(); // clears the form
+    document.getElementById("my_modal_3").close(); // close the modal
+  };
   return (
     <>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
@@ -20,16 +25,14 @@ const Login = () => {
       >
         Login
       </button> */}
-      <div className="dark:bg-slate-200 dark:text-black">
+      <div className="dark:bg-white dark:text-black">
         <dialog id="my_modal_3" className="modal">
-          <div className="modal-box">
+          <div className="modal-box dark:bg-white dark:text-black">
             <form onSubmit={handleSubmit(onSubmit)} method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <button
-                to={"/"}
-                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-                // onClick={ ()=> document.getElementById("my_modal_3").open = false }
-            
+                onClick={() => document.getElementById("my_modal_3").close()}
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"           
               >
                 ✕
               </button>
