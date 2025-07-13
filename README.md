@@ -107,9 +107,8 @@ npm run dev
 
 ---
 
-## 📸 Screenshots (Optional)
+## 📸 Screenshots
 
-Create a folder `screenshots/` and place images, then link here:
 
 | Home Page | Course Section | Dark Mode |
 |-----------|----------------|-----------|
