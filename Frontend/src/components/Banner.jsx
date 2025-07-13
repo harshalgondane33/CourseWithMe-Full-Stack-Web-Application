@@ -1,6 +1,16 @@
 import React from "react";
-import baneer from "../assets/baneer.png"
+import { useState } from "react";
+import baneer from "../assets/baneer.png";
 const Banner = () => {
+  const [email, setEmail] = useState("");
+  const handleConnect = () => {
+    const subject = encodeURIComponent("Let's Connect!");
+    const body = encodeURIComponent(
+      `Hello, I would like to connect with you.\nMy email: ${email}`
+    );
+    
+    window.location.href = `mailto:harshalgondane333@gmail.com?subject=${subject}&body=${body}`;
+  };
   return (
     <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10 ">
       <div className="order-2 md:order-2 w-full md:w-1/2 mt-12 md:mt-20">
@@ -32,9 +42,18 @@ const Banner = () => {
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </g>
             </svg>
-            <input className="dark:text-stone-700" type="email" placeholder="mail@site.com" required />
+            <input
+              className="dark:text-stone-700"
+              type="email"
+              placeholder="mail@site.com"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </label>
-          <button className="btn btn-soft btn-info">Connect</button>
+          <button className="btn btn-soft btn-info" onClick={handleConnect}>
+            Connect
+          </button>
           <div className="validator-hint hidden">Enter valid email address</div>
         </div>
       </div>

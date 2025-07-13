@@ -1,63 +1,68 @@
 import React from "react";
-import { useState,useEffect } from "react";
-import { Link,Outlet } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, Outlet } from "react-router-dom";
 import Login from "./Login";
+import { useAuth } from "../Context/AuthProvider";
+import Logout from "./Logout";
 const Navbar = () => {
-    const [theme, settheme] = useState(
-      localStorage.getItem("theme")? localStorage.getItem("theme"):"light"
-    );
-    const element=document.documentElement;
-    useEffect(() => {
-      if(theme==="dark")
-      {
-        element.classList.add("dark")
-        localStorage.setItem("theme","dark")
-        document.body.classList.add("dark")
-      }
-      else{
-        element.classList.remove("dark")
-        localStorage.setItem("theme","light")
-        document.body.classList.remove("dark")
-      }   
+  const [authUser, setauthUser] = useAuth();
+  // console.log(authUser);
+  const [theme, settheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+  const element = document.documentElement;
+  useEffect(() => {
+    if (theme === "dark") {
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      document.body.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      document.body.classList.remove("dark");
+    }
+  }, [theme]);
 
-    }, [theme])
+  const [Sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handlescroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handlescroll);
+    return () => {
+      window.removeEventListener("scroll", handlescroll);
+    };
+  }, []);
 
-    const [Sticky, setSticky] = useState(false);
-    useEffect(() => {
-      const handlescroll = () => {
-        if(window.scrollY>0)
-        {
-            setSticky(true);
-        }
-        else{
-            setSticky(false);
-        }
-      }
-      window.addEventListener('scroll',handlescroll);
-      return () => {
-        window.removeEventListener('scroll',handlescroll);
-      }
-    }, [])
-    
   const navItems = (
     <>
       <li>
-        <Link to='/'>Home</Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
         {/* <a>About</a> */}
-        <Link to="/course">About</Link>
+        <Link to="/about">About</Link>
       </li>
       <li>
         <Link to="/course">Courses</Link>
       </li>
       <li>
-        <Link to={'/course'}>Contact</Link>
+        <Link to={"/contact"}>Contact</Link>
       </li>
     </>
   );
   return (
-    <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 right-0 left-0 z-50 dark:bg-gray-800 dark:text-white ${Sticky?"sticky-navbar bg-base-300 shadow-md duration-300 transition-all ease-in-out dark:bg-gray-950 dark:text-white":""}`} >
+    <div
+      className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 right-0 left-0 z-50 dark:bg-gray-800 dark:text-white ${
+        Sticky
+          ? "sticky-navbar bg-base-300 shadow-md duration-300 transition-all ease-in-out dark:bg-gray-950 dark:text-white"
+          : ""
+      }`}
+    >
       <div className="navbar shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
@@ -95,7 +100,7 @@ const Navbar = () => {
             <input type="text" placeholder="Type here" className="input" />
           </div>
           <div>
-            <label className="toggle text-base-content" >
+            <label className="toggle text-base-content">
               <input
                 type="checkbox"
                 value="synthwave"
@@ -106,11 +111,9 @@ const Navbar = () => {
                 aria-label="sun"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                onClick={
-                  ()=>{
-                    settheme(theme==="dark"?"light":"dark")
-                  }
-                }
+                onClick={() => {
+                  settheme(theme === "dark" ? "light" : "dark");
+                }}
               >
                 <g
                   strokeLinejoin="round"
@@ -135,11 +138,9 @@ const Navbar = () => {
                 aria-label="moon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                onClick={
-                  ()=>{
-                    settheme(theme==="light"?"dark":"light")
-                  }
-                }
+                onClick={() => {
+                  settheme(theme === "light" ? "dark" : "light");
+                }}
               >
                 <g
                   strokeLinejoin="round"
@@ -153,12 +154,21 @@ const Navbar = () => {
               </svg>
             </label>
           </div>
-          <div>
-            <div className="p-2 cursor-pointer rounded-lg bg-black text-white hover:bg-slate-600 duration-300" onClick={()=>document.getElementById('my_modal_3').showModal()}>
-              Login
+          {authUser ? (
+            <Logout></Logout>
+          ) : (
+            <div>
+              <div
+                className="p-2 cursor-pointer rounded-lg bg-black text-white hover:bg-slate-600 duration-300"
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
+              >
+                Login
+              </div>
+              <Login></Login>
             </div>
-            <Login></Login>
-          </div>
+          )}
         </div>
       </div>
       {/* <Outlet/> */}
